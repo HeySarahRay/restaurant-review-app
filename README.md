@@ -6,7 +6,7 @@ For this project, we took code that had been built and improved upon it. Respons
 ![Screenshot of Review Page](https://github.com/blissophist/restaurant-review-app/blob/master/img/screenshot-of-review-screen.PNG)
 
 ## Check It Out For Yourself
-Review a live screen of the project [here](), or
+Review a live screen of the project [here](https://blissophist.github.io/restaurant-review-app/), or
 1. Clone/download this repository
 2. Open the project folder in your text editor
 3. In the terminal, check your version of python by typing `python -V`
