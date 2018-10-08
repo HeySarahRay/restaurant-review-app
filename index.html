@@ -23,20 +23,20 @@
 
   
     <section aria-label="Mapbox Map Application" id="map-container">
-      <div id="map"></div>
+      <div id="map" aria-label="location" role="application"></div>
     </section>
   <main id="maincontent" tabindex="-1">
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="Select Neighborhood">
+        <select id="neighborhoods-select" aria-label="Select Neighborhood" name="neighborhoods" onchange="updateRestaurants()" tabindex="0">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="Select Cuisine">
+        <select id="cuisines-select" aria-label="Select Cuisine" name="cuisines" onchange="updateRestaurants()" tabindex="0">
           <option value="all">All Cuisines</option>
         </select>
       </div>
-      <ul id="restaurants-list"></ul>
+      <ul id="restaurants-list" aria-label="list" name="restaurants list"></ul>
     </section>
 
   </main>
