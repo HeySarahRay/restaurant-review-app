@@ -1,8 +1,11 @@
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', ()=> {
-    navigator.serviceWorker.register('js/serviceworker.js')
-    .catch(err => console.log(`Service Worker Error: ${err}`));
-  })
+  navigator.serviceWorker.register('../sw.js')
+    .then(registration => {
+      console.log('Service worker has registered. Scope is:', registration.scope);
+    })
+    .catch(error => {
+      console.log('Service worker registration failed, error:', error);
+    })
 }
 
 let restaurants,
@@ -168,6 +171,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = restaurant.alt;
   li.append(image);
 
   const name = document.createElement('h1');
@@ -185,7 +189,6 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  more.tabIndex = '3';
   li.append(more)
 
   return li
